@@ -63,7 +63,7 @@ class FEM(nn.Module):
         y_ge2 = self.conv_ge2(x)
         y_ge = F.leaky_relu(torch.cat([y_ge1, y_ge2], dim=3))
 
-        y = F.leaky_relu(torch.cat([self.w * y_ge, y_le], dim=1))
+        y = torch.cat([self.w * y_ge, y_le], dim=1)
         return y
 
 

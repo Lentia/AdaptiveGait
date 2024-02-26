@@ -135,7 +135,7 @@ class AdaptiveGait(BaseModel):
             self.AFFB2 = nn.Sequential(
                 AFFB(in_c[1], in_c[2], halving=2, kernel_size=(
                     3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1)),
-                AFFB(in_c[2], in_c[2], halving=2, fm_sign=False, kernel_size=(
+                AFFB(in_c[2], in_c[2], halving=2, kernel_size=(
                     3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1)),
             )
             self.FEM = nn.Sequential(
